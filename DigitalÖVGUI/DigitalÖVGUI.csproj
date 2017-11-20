@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="autocompleteSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="autocompleteSearch.Designer.cs">
+      <DependentUpon>autocompleteSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +59,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="autocompleteSearch.resx">
+      <DependentUpon>autocompleteSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm1.resx">
       <DependentUpon>MainForm1.cs</DependentUpon>
     </EmbeddedResource>
