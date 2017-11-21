@@ -36,12 +36,12 @@
             // 
             this.acsInput.Dock = System.Windows.Forms.DockStyle.Top;
             this.acsInput.Location = new System.Drawing.Point(0, 0);
-            this.acsInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.acsInput.Margin = new System.Windows.Forms.Padding(4);
             this.acsInput.Name = "acsInput";
             this.acsInput.Size = new System.Drawing.Size(265, 22);
             this.acsInput.TabIndex = 0;
             this.acsInput.TextChanged += new System.EventHandler(this.acsInput_TextChanged);
-            this.acsInput.Leave += new System.EventHandler(this.acsInput_Leave);
+            this.acsInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.acsInput_KeyDown);
             // 
             // acsListbox
             // 
@@ -49,11 +49,11 @@
             this.acsListbox.FormattingEnabled = true;
             this.acsListbox.ItemHeight = 16;
             this.acsListbox.Location = new System.Drawing.Point(0, 22);
-            this.acsListbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.acsListbox.Margin = new System.Windows.Forms.Padding(4);
             this.acsListbox.Name = "acsListbox";
             this.acsListbox.Size = new System.Drawing.Size(265, 148);
             this.acsListbox.TabIndex = 1;
-            this.acsListbox.Visible = false;
+            this.acsListbox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.acsListbox_KeyDown);
             // 
             // autocompleteSearch
             // 
@@ -61,9 +61,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.acsListbox);
             this.Controls.Add(this.acsInput);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "autocompleteSearch";
             this.Size = new System.Drawing.Size(265, 170);
+            this.Load += new System.EventHandler(this.autocompleteSearch_Load);
+            this.Leave += new System.EventHandler(this.autocompleteSearch_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
